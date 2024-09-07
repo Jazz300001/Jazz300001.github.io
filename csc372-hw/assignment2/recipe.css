@@ -25,7 +25,9 @@ body {
     font-size: 18pt;
     font-weight: normal;
     background-color: grey;
-    color: yellow;
+    color: #A4A400;
+    display: inline-block;
+
   }
   
   blockquote {
