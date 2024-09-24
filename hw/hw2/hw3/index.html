@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNCG Food Recommendations</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Best Food Around UNCG</h1>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>
+        Are you a culinary adventurer in search of the perfect meal on campus? Look no further! We've curated a list of the most exceptional dishes that are sure to tantalize your taste buds. From fresh pizzas to mouthwatering sushi, this list has got you covered. So, put on your foodie hat and let's dive into the delightful world of flavors.
+      </p>
+    </section>
+
+    <section class="recommendations">
+      <article class="restaurant">
+        <h2>Restaurant 1: Pizza Palace</h2>
+        <p>Location: 123 Main St | Specialty: Pizza, Hours: 11 AM - 10 PM</p>
+        <div class="dishes">
+          <img src="images/pizza.jpg" alt="Pizza" onclick="showDishDetails('Pizza', 12)">
+          <img src="images/pasta.jpg" alt="Pasta" onclick="showDishDetails('Pasta', 10)">
+          <img src="images/salad.jpg" alt="Salad" onclick="showDishDetails('Salad', 8)">
+        </div>
+      </article>
+
+
+      <aside id="dish-details" class="dish-details">
+      </aside>
+    </section>
+
+    <nav>
+      <a href="meal-plan.html">Create Your Meal Plan</a>
+    </nav>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

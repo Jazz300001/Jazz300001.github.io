@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Plan</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Create Your Meal Plan</h1>
+  </header>
+
+  <main>
+    <section class="meal-plan">
+      <div class="dish-list">
+        <h2>Available Dishes</h2>
+        <ul>
+          <li onclick="addToMealPlan('Pizza', 12)">Pizza - $12</li>
+          <li onclick="addToMealPlan('Pasta', 10)">Pasta - $10</li>
+          <li onclick="addToMealPlan('Salad', 8)">Salad - $8</li>
+        </ul>
+      </div>
+
+      <div class="selected-meal-plan">
+        <h2>Your Meal Plan</h2>
+        <ul id="meal-plan-list">
+        </ul>
+        <p>Total: $<span id="total-price">0</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
