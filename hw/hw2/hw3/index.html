@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UNCG Food Recommendations</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -21,15 +21,34 @@
 
     <section class="recommendations">
       <article class="restaurant">
-        <h2>Restaurant 1: Pizza Palace</h2>
-        <p>Location: 123 Main St | Specialty: Pizza, Hours: 11 AM - 10 PM</p>
+        <h2>Restaurant 1: Salsaritas</h2>
+        <p>Location: 507 Stirling St, Greensboro, NC 27412 | Specialty: Mexican food, Hours: 10 AM - 7 PM</p>
         <div class="dishes">
-          <img src="images/pizza.jpg" alt="Pizza" onclick="showDishDetails('Pizza', 12)">
-          <img src="images/pasta.jpg" alt="Pasta" onclick="showDishDetails('Pasta', 10)">
-          <img src="images/salad.jpg" alt="Salad" onclick="showDishDetails('Salad', 8)">
+          <img src="images/familyfiesta.jpg" alt="Family Fiesta" data-price="44.99">
+          <img src="images/quesadilla.jpg" alt="Quesadilla" data-price="9.49">
+          <img src="images/honduranbrownie.jpg" alt="Honduran Brownie" data-price="2.99">
         </div>
       </article>
 
+      <article class="restaurant">
+        <h2>Restaurant 2: Sushi Republic</h2>
+        <p>Location: 329 Tate St, Greensboro, NC 27403 | Specialty: Sushi, Hours: Lunch 11:30-2:30 Dinner 5:00-9:30</p>
+        <div class="dishes">
+          <img src="images/spicytunabowl.jpg" alt="Spicy Tuna Bowl" data-price="11">
+          <img src="images/tempuraudon.jpg" alt="Tempura Udon" data-price="9.5">
+          <img src="images/friedchickenbento.jpg" alt="Fried Chicken Katsu Bento Box" data-price="10.5">
+        </div>
+      </article>
+
+      <article class="restaurant">
+        <h2>Restaurant 3: Slices Pizza By Tony</h2>
+        <p>Location: 401 Tate St, Greensboro, NC 27403 | Specialty: Pizza, Hours: 10:30 AM - 10 PM</p>
+        <div class="dishes">
+          <img src="images/cheese.jpg" alt="Cheese Pizza" data-price="11.39">
+          <img src="images/bbqchicken.jpg" alt="BBQ Chicken Pizza" data-price="15.19">
+          <img src="images/bakedziti.jpg" alt="Baked Ziti Pizza" data-price="15.19">
+        </div>
+      </article>
 
       <aside id="dish-details" class="dish-details">
       </aside>
@@ -39,7 +58,6 @@
       <a href="meal-plan.html">Create Your Meal Plan</a>
     </nav>
   </main>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
+

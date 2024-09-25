@@ -1,37 +1,41 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meal Plan</title>
+  <title>Create Your Meal Plan</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Create Your Meal Plan</h1>
   </header>
 
-  <main>
-    <section class="meal-plan">
-      <div class="dish-list">
-        <h2>Available Dishes</h2>
-        <ul>
-          <li onclick="addToMealPlan('Pizza', 12)">Pizza - $12</li>
-          <li onclick="addToMealPlan('Pasta', 10)">Pasta - $10</li>
-          <li onclick="addToMealPlan('Salad', 8)">Salad - $8</li>
-        </ul>
-      </div>
+  <main class="meal-plan-container">
+    <section class="available-dishes">
+      <h2>Available Dishes</h2>
+      <ul id="available-dishes">
+        <li data-name="Family Fiesta Pack" data-price="44.99">Family Fiesta Pack - $44.99 <button class="add-btn">Add</button></li>
+        <li data-name="Quesadilla" data-price="9.49">Quesadilla - $9.49 <button class="add-btn">Add</button></li>
+        <li data-name="Honduran Chocolate Brownie" data-price="2.99">Honduran Chocolate Brownie - $2.99 <button class="add-btn">Add</button></li>
+        <li data-name="Spicy Tuna Bowl" data-price="11.00">Spicy Tuna Bowl - $11.00 <button class="add-btn">Add</button></li>
+        <li data-name="Tempura Udon" data-price="9.50">Tempura Udon - $9.50 <button class="add-btn">Add</button></li>
+        <li data-name="Fried Chicken Katsu Bento Box" data-price="10.50">Fried Chicken Katsu Bento Box - $10.50 <button class="add-btn">Add</button></li>
+        <li data-name="Cheese Pizza" data-price="11.39">Cheese Pizza - $11.39 <button class="add-btn">Add</button></li>
+        <li data-name="BBQ Chicken Pizza" data-price="15.19">BBQ Chicken Pizza - $15.19 <button class="add-btn">Add</button></li>
+        <li data-name="Baked Ziti Pizza" data-price="15.19">Baked Ziti Pizza - $15.19 <button class="add-btn">Add</button></li>
+      </ul>
+    </section>
 
-      <div class="selected-meal-plan">
-        <h2>Your Meal Plan</h2>
-        <ul id="meal-plan-list">
-        </ul>
-        <p>Total: $<span id="total-price">0</span></p>
-      </div>
+    <section class="meal-plan">
+      <h2>Your Meal Plan</h2>
+      <ul id="meal-plan">
+      </ul>
+      <p>Total: $<span id="total-cost">0.00</span></p>
     </section>
   </main>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
+
