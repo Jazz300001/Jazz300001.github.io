@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.choices figure {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.choices img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#computerThrow {
+    width: 100px;
+}
+
+.selected {
+    border: 2px solid blue;
+}
+
+.score {
+    margin-top: 20px;
+}
+
+#reset {
+    margin-top: 10px;
+}
