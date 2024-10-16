@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Bulk Upload</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Admin Dashboard</h1>
+            <p>SwiftCourt Sneakers - Bulk Upload</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="adminbulk.html">Bulk Upload</a></li>
+                <li><a href="adminproducts.html">Product Listing</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="upload-section">
+        <h2>Bulk Upload Products</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="upload">Choose a file (JSON, CSV, TXT):</label>
+            <input type="file" id="upload" name="upload" accept=".json, .csv, .txt">
+            <button type="submit">Upload</button>
+        </form>
+        <p><strong>Example file format (JSON):</strong></p>
+        <pre>
+{
+    "products": [
+        {
+            "name": "Air Zoom BB NXT",
+            "description": "Lightweight performance shoe",
+            "category": "Basketball",
+            "price": 180,
+            "image": "images/shoe1.jpg"
+        },
+        
+    ]
+}
+        </pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SwiftCourt Sneakers. Admin Panel</p>
+    </footer>
+</body>
+</html>
