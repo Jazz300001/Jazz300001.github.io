@@ -4,12 +4,7 @@ const jokeRoutes = require('./routes/jokeRoutes');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
-app.set('view engine', 'pug'); 
-
-app.get('/', (req, res) => {
-    
-});
+app.use(express.static('public')); 
 
 app.use('/jokebook', jokeRoutes);
 
