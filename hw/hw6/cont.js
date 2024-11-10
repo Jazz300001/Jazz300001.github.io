@@ -1,4 +1,4 @@
-const JokeModel = require('../models/jokeModel');
+const JokeModel = require('model.js');
 
 exports.getCategories = (req, res) => {
     JokeModel.getCategories((err, categories) => {
@@ -9,7 +9,7 @@ exports.getCategories = (req, res) => {
 
 exports.getJokesByCategory = (req, res) => {
     const { category } = req.params;
-    const limit = req.query.limit || 10;
+    const limit = parseInt(req.query.limit) || 10;
 
     JokeModel.getJokesByCategory(category, limit, (err, jokes) => {
         if (err) return res.status(500).json({ error: err.message });
@@ -20,10 +20,7 @@ exports.getJokesByCategory = (req, res) => {
 
 exports.addJoke = (req, res) => {
     const { category, setup, delivery } = req.body;
-
-    if (!category || !setup || !delivery) {
-        return res.status(400).json({ error: "All fields are required" });
-    }
+    if (!category || !setup || !delivery) return res.status(400).json({ error: "All fields are required" });
 
     JokeModel.addJoke(category, setup, delivery, (err) => {
         if (err) return res.status(500).json({ error: err.message });
