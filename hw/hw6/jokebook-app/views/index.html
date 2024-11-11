@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokebook</title>
+</head>
+<body>
+  <h1>Jokebook</h1>
+  <button onclick="fetchCategories()">View Categories</button>
+  <button onclick="fetchRandomJoke()">Random Joke</button>
+  <div id="content"></div>
+
+  <script>
+    async function fetchCategories() {
+      const response = await fetch('/jokebook/categories');
+      const categories = await response.json();
+      document.getElementById('content').innerHTML = categories.map(cat => `<p>${cat.name}</p>`).join('');
+    }
+
+    async function fetchRandomJoke() {
+      const categories = ['funnyJoke', 'lameJoke'];
+      const category = categories[Math.floor(Math.random() * categories.length)];
+      const response = await fetch(`/jokebook/joke/${category}?limit=1`);
+      const joke = await response.json();
+      document.getElementById('content').innerHTML = `<p>${joke[0].setup} - ${joke[0].delivery}</p>`;
+    }
+  </script>
+</body>
+</html>
