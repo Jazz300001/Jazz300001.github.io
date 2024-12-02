@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Edit Product</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Admin Dashboard</h1>
+            <p>SwiftCourt Sneakers - Edit Product</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="adminbulk.html">Bulk Upload</a></li>
+                <li><a href="adminproducts.html">Product Listing</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="edit-product-section">
+        <h2>Edit Product</h2>
+        <form action="#" method="post">
+            <label for="product-name">Name:</label>
+            <input type="text" id="product-name" value="Air Zoom BB NXT">
+
+            <label for="description">Description:</label>
+            <textarea id="description">Lightweight performance shoe</textarea>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" value="Basketball">
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" value="180">
+
+            <label for="image-path">Image Path:</label>
+            <input type="text" id="image-path" value="images/shoe1.jpg">
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SwiftCourt Sneakers. Admin Panel</p>
+    </footer>
+</body>
+</html>

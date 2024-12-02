@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SwiftCourt Sneakers</h1>
+            <p>Your Ultimate Source for Basketball Shoes</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="shopping-cart">
+        <h2>Your Cart</h2>
+        <div class="cart-item">
+            <img src="images/shoe1.jpg" alt="Air Zoom BB NXT" class="cart-image">
+            <p><strong>Air Zoom BB NXT</strong></p>
+            <p>$180</p>
+            <input type="number" value="1" min="1">
+            <button class="button">Update</button>
+            <button class="button">Remove</button>
+            <p><strong>Total:</strong> $180</p>
+        </div>
+
+        <div class="cart-item">
+            <img src="images/shoe2.jpg" alt="KD 14" class="cart-image">
+            <p><strong>KD 14</strong></p>
+            <p>$150</p>
+            <input type="number" value="2" min="1">
+            <button class="button">Update</button>
+            <button class="button">Remove</button>
+            <p><strong>Total:</strong> $300</p>
+        </div>
+
+        <div class="cart-summary">
+            <p><strong>Subtotal:</strong> $480</p>
+            <p><strong>Tax (6.75%):</strong> $32.40</p>
+            <p><strong>Delivery Fee:</strong> $10.00</p>
+            <p><strong>Total:</strong> $522.40</p>
+            <button class="button">Checkout</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SwiftCourt Sneakers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
