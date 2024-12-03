@@ -4,18 +4,28 @@ const mockProducts = [
     { id: 3, name: 'Kyrie Infinity', price: 130, description: 'Responsive shoe', image: 'images/shoe3.jpg' },
 ];
 
-exports.getAllProducts = () => mockProducts;
-
-exports.getProductById = (id) => mockProducts.find(product => product.id === parseInt(id));
-const db = require('../db');
-
+const db = require('../db'); 
 exports.getAllProducts = () => {
     const stmt = db.prepare('SELECT * FROM Products');
-    return stmt.all();
+    return stmt.all();  
 };
 
 exports.getProductById = (id) => {
     const stmt = db.prepare('SELECT * FROM Products WHERE id = ?');
-    return stmt.get(id);
+    return stmt.get(id);  
 };
 
+exports.createProduct = (product) => {
+    const stmt = db.prepare('INSERT INTO Products (name, price, description, image) VALUES (?, ?, ?, ?)');
+    stmt.run(product.name, product.price, product.description, product.image);
+};
+
+exports.updateProduct = (id, product) => {
+    const stmt = db.prepare('UPDATE Products SET name = ?, price = ?, description = ?, image = ? WHERE id = ?');
+    stmt.run(product.name, product.price, product.description, product.image, id);  
+};
+
+exports.deleteProduct = (id) => {
+    const stmt = db.prepare('DELETE FROM Products WHERE id = ?');
+    stmt.run(id);  
+};
